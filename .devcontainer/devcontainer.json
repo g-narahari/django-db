@@ -1,0 +1,14 @@
+{
+    "name": "Django + MySQL",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "postCreateCommand": "pip install -r requirements.txt && sudo service mysql start && sudo mysql -u root < .devcontainer/init.sql",
+    "forwardPorts": [8000, 3306],
+    "customizations": {
+      "vscode": {
+        "extensions": ["ms-python.python"]
+      }
+    }
+  }
+  
